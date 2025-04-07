@@ -62,11 +62,7 @@ jobs:
 
       - name: Pod repo update
         run: pod repo update
-
-      - name: Install CocoaPods
-        run: |
-          cd ios
-          pod install --repo-update || pod install
+       
 
       - name: Build iOS
         run: flutter build ios --release --no-codesign
